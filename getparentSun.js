@@ -2,7 +2,7 @@
 Ext.onReady(function(){
 	
 /**
-
+我们可以结合知识点去查api
 ExtJs--05--给window组件添加功能条以及子组件获取上级或下级组件的属性和方法
 1--
 给容器组件添加控制条 及 控制项
@@ -10,6 +10,16 @@ ExtJs--05--给window组件添加功能条以及子组件获取上级或下级组
 2--
 根据组件本身拿到上级组件的属性及方法调用
  */
+/**
+btn.up("window").hide();  //第一种获得上级组件  当然up是向上查找,  down是向下查找
+						alert(btn.up("window").title);
+Ext.Msg.alert("no2","2 info ");
+Ext.getCmp("id001").hide();   //第二种获得上级组件
+//ownerCt：得到当前对象所在的容器组件。 
+						btn.ownerCt.ownerCt.hide();   //第三种获得上级组件
+//						btn.up().up().hide();  //第四种获得上级组件
+
+**/
 	var win = new Ext.window.Window({
 				id:"id001",//自定义编号
 				title:"自定义标题信息",//标题
