@@ -1,0 +1,12 @@
+var label = Ext.create('Ext.form.Label', {
+text : '点我',
+listeners : {
+    render : function() {
+        Ext.fly(this.el).on('click', function(e, t) {
+            alert(111);
+            });
+         })
+        }
+    },
+    scope : this
+});
